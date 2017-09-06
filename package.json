@@ -1,0 +1,19 @@
+{
+  "name": "whereami",
+  "version": "0.1.0",
+  "description": "Idea based off of geoguessr. This was a weekend project I did just to come up with a first version. Feel free to pull, and add PRs on bugs you find (I know there are quite a few, which I'll get around to fiddling with on rainy days!).",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "jest -u"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willdavidow/whereami.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willdavidow/whereami/issues"
+  },
+  "homepage": "https://github.com/willdavidow/whereami#readme"
+}
