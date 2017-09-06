@@ -1,0 +1,89 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "airbnb"
+  ],
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jquery": true,
+    "mocha": true,
+    "jest": true
+  },
+  "rules": {
+    "array-bracket-spacing": [1],
+    "arrow-body-style": [0, "as-needed"],
+    "block-spacing": [1],
+    "comma-dangle": [0],
+    "comma-spacing": [1],
+    "func-names": ["error", "as-needed"],
+    "import/no-extraneous-dependencies": [1],
+    "import/extensions": [0],
+    "indent": [0, 2],
+    "jsx-a11y/no-static-element-interactions": [0],
+    "key-spacing": [1],
+    "keyword-spacing": [1],
+    "no-case-declarations": [1],
+    "no-multi-spaces": [1],
+    "no-multiple-empty-lines": [1],
+    "no-plusplus": [1],
+    "no-trailing-spaces": [1],
+    "no-underscore-dangle":[0],
+    "no-unused-vars": [1],
+    "no-var": [1],
+    "object-curly-spacing": [1],
+    "one-var-declaration-per-line": [1],
+    "one-var": [1],
+    "padded-blocks": [1],
+    "prefer-const": [0],
+    "prefer-template": [0],
+    "quote-props": [0],
+    "react/forbid-prop-types": [0, { "forbid": ["any"] }],
+    "react/jsx-closing-bracket-location":[1],
+    "react/jsx-filename-extension":[0],
+    "react/jsx-indent-props": [1,2],
+    "react/jsx-indent": [1,2],
+    "react/jsx-space-before-closing":[1],
+    "react/no-string-refs": [1],
+    "react/no-unescaped-entities": [1],
+    "react/prefer-es6-class": [1],
+    "react/prop-types": [1],
+    "react/require-default-props": [0],
+    "semi-spacing": [1],
+    "space-before-function-paren":[0,{"anonymous": "ignore", "named": "always"}],
+    "space-in-parens": [1],
+    "space-infix-ops": [1],
+    "spaced-comment": [0],
+    "vars-on-top": [1],
+    "no-restricted-syntax": [
+      1,
+    "ForInStatement",
+    "ForOfStatement",
+    "LabeledStatement",
+    "WithStatement",
+    ],
+    "max-len": [
+      1, 200, 2,
+    {
+      "ignoreUrls": true,
+      "ignoreComments": true,
+      "ignoreRegExpLiterals": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true,
+    }
+    ]
+  }
+}

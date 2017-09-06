@@ -3,17 +3,76 @@
   "version": "0.1.0",
   "description": "Idea based off of geoguessr. This was a weekend project I did just to come up with a first version. Feel free to pull, and add PRs on bugs you find (I know there are quite a few, which I'll get around to fiddling with on rainy days!).",
   "main": "bundle.js",
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
   "scripts": {
+    "build": "NODE_ENV=production webpack -p --config webpack.config.babel.js",
+    "start": "webpack-dev-server --progress --colors",
     "test": "jest -u"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/willdavidow/whereami.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Brian Kinney <webdevbrian@gmail.com>, Will Davidow <w.davidow@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/willdavidow/whereami/issues"
   },
-  "homepage": "https://github.com/willdavidow/whereami#readme"
+  "homepage": "https://github.com/willdavidow/whereami#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "breakpoint-sass": "^2.7.1",
+    "isomorphic-fetch": "^2.2.1",
+    "node-sass": "^4.5.3",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.3",
+    "babel-jest": "^21.0.0",
+    "babel-loader": "^7.1.2",
+    "css-loader": "^0.28.7",
+    "enzyme": "^2.9.1",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^21.0.1",
+    "postcss-loader": "^2.0.6",
+    "postcss-scss": "^1.0.2",
+    "react-test-renderer": "^15.6.1",
+    "redux-logger": "^3.0.6",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "jest": {
+    "bail": false,
+    "collectCoverage": true,
+    "resetModules": true,
+    "verbose": true,
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(jsx|js)$",
+    "moduleFileExtensions": [
+      "jsx",
+      "js",
+      "json"
+    ]
+  }
 }

@@ -1,0 +1,36 @@
+{
+  "configBaseDir": "./",
+  "ignoreFiles": [
+    "dist/**/*",
+    "node_modules/**/*"
+  ],
+  "extends":  [
+    "stylelint-config-recommended",
+    "stylelint-config-property-sort-order-smacss"
+  ],
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "at-rule-no-unknown": [ true, {
+      "ignoreAtRules": [
+        "content",
+        "extends",
+        "include",
+        "mixin"
+      ]
+    }],
+    "block-no-empty": null,
+    "unit-whitelist": [
+      "%",
+      "deg",
+      "em",
+      "ms",
+      "px",
+      "rem",
+      "s",
+      "vh",
+      "vw"
+    ]
+  }
+}
