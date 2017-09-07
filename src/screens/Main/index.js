@@ -1,5 +1,9 @@
+import { injectGlobal } from 'styled-components';
 import MainScreen from './MainScreen';
+import MainScreenStyle from './MainScreen.style';
 
-// TO DO: do redux connects here and then export, but for now...
+injectGlobal`
+  ${MainScreenStyle}
+`;
 
 export default MainScreen;
