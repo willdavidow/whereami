@@ -21,9 +21,9 @@
   "author": "Brian Kinney <webdevbrian@gmail.com>, Will Davidow <w.davidow@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/willdavidow/whereami/issues"
+    "url": "https://github.com/webdevbrian/whereami/issues"
   },
-  "homepage": "https://github.com/willdavidow/whereami#readme",
+  "homepage": "https://github.com/webdevbrian/whereami#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
@@ -34,10 +34,14 @@
     "node-sass": "^4.5.3",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-google-maps": "^7.3.0",
+    "react-helmet": "^5.2.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^2.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.3",

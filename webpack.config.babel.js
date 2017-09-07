@@ -12,7 +12,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const appConstants = {
   'process.env': {
-    API_TYPE: JSON.stringify('web'),
+    GMAPS_API_KEY: JSON.stringify('AIzaSyBlv6nMqco0AdDGO5V8ufudA1B61ig8aUg'),
     NODE_ENV: JSON.stringify(process.env.NODE_ENV !== undefined ? process.env.NODE_ENV : 'dev')
   },
 };
@@ -29,7 +29,6 @@ export default {
   output: {
     path: distPath,
     filename: !isProd ? 'app.js' : '[name]-client.js',
-    publicPath: '/',
   },
   resolve: {
     modules: [
@@ -40,7 +39,9 @@ export default {
   },
   plugins: [
     new DefinePlugin(appConstants),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'index.tpl.html'
+    }),
     new webpack.HotModuleReplacementPlugin(),
     (isProd ? new webpack.optimize.CommonsChunkPlugin('common') : utils.noop()),
     (isProd ? new webpack.optimize.UglifyJsPlugin({
@@ -67,6 +68,7 @@ export default {
       {
         // js & react components
         test: /\.jsx?$/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
       },
       {
