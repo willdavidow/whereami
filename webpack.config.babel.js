@@ -20,7 +20,7 @@ const appConstants = {
 export default {
   context: srcPath,
   target: 'web',
-  watch: true,
+  watch: !isProd,
   devServer: {
     contentBase: srcPath,
     compress: true,
@@ -39,7 +39,7 @@ export default {
   ],
   output: {
     path: distPath,
-    filename: 'bundle.js',
+    filename: !isProd ? 'bundle.js' : '[name]-client.js',
     publicPath: '/'
   },
   resolve: {
@@ -55,7 +55,7 @@ export default {
       title: 'Where Am I?',
       template: 'index.tpl.html'
     }),
-    new webpack.HotModuleReplacementPlugin(),
+    (isProd ? new webpack.HotModuleReplacementPlugin() : utils.noop()),
     (isProd ? new webpack.optimize.CommonsChunkPlugin('common') : utils.noop()),
     (isProd ? new webpack.optimize.UglifyJsPlugin({
       compress: {
