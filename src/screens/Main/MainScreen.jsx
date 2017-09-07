@@ -19,12 +19,7 @@ class Main extends PureComponent {
           <StreetViewPanorama
             defaultPosition={coordinates}
             visible
-          >
-            <OverlayView
-              position={{ lat: 49.28590291211115, lng: -123.11248166065218 }}
-              mapPaneName={OverlayView.OVERLAY_LAYER}
-            />
-          </StreetViewPanorama>
+          />
         </GoogleMap>
       )
     );

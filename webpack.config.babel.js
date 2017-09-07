@@ -20,15 +20,27 @@ const appConstants = {
 export default {
   context: srcPath,
   target: 'web',
-
+  watch: true,
+  devServer: {
+    contentBase: srcPath,
+    compress: true,
+    hot: true,
+    open: true,
+    port: 8080,
+    watchContentBase: true,
+    watchOptions: {
+      poll: 1000
+    }
+  },
+  // entry point
   entry: [
-    'webpack-dev-server/client?http://0.0.0.0:8080', // WebpackDevServer host and port
-    'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
-    'app.js' // entry point
+    'react-hot-loader/patch',
+    'app.js'
   ],
   output: {
     path: distPath,
-    filename: !isProd ? 'app.js' : '[name]-client.js',
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   resolve: {
     modules: [
@@ -40,6 +52,7 @@ export default {
   plugins: [
     new DefinePlugin(appConstants),
     new HtmlWebpackPlugin({
+      title: 'Where Am I?',
       template: 'index.tpl.html'
     }),
     new webpack.HotModuleReplacementPlugin(),
@@ -76,24 +89,24 @@ export default {
         exclude: /node_modules/,
         loader: 'url-loader?limit=8192'
       },
-      { // sass
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
-          use: [
-            {
-              loader: 'css-loader'
-            },
-            {
-              loader: 'postcss-loader'
-            }, {
-              loader: 'sass-loader',
-              options: {
-                sourceMap: true,
-              }
-            }
-          ]
-        })
-      }
+      // { // sass
+      //   test: /\.scss$/,
+      //   loader: ExtractTextPlugin.extract({
+      //     use: [
+      //       {
+      //         loader: 'css-loader'
+      //       },
+      //       {
+      //         loader: 'postcss-loader'
+      //       }, {
+      //         loader: 'sass-loader',
+      //         options: {
+      //           sourceMap: true,
+      //         }
+      //       }
+      //     ]
+      //   })
+      // }
       // {
       //   test: /\.(svg)$/,
       //   exclude: /node_modules/,
