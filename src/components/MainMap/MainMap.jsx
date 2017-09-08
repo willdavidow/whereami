@@ -6,7 +6,7 @@ import {
   StreetViewPanorama
 } from 'react-google-maps';
 
-class Main extends PureComponent {
+class MainMap extends PureComponent {
   render() {
     const coordinates = { lat: 49.2853171, lng: -123.1119202 };
     const StreetView = withGoogleMap(
@@ -26,11 +26,11 @@ class Main extends PureComponent {
 
     return (
       <StreetView
-        containerElement={<div style={{width: `100vw`, height: '100vh' }} />}
+        containerElement={<div style={{position: `relative`, width: `100vw`, height: '100vh' }} />}
         mapElement={<div style={{width: `100vw`, height: '100vh' }} />}
       />
     );
   }
 }
 
-export default Main;
+export default MainMap;
