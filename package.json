@@ -22,7 +22,18 @@
     "type": "git",
     "url": "git+https://github.com/willdavidow/whereami.git"
   },
-  "author": "Brian Kinney <webdevbrian@gmail.com>, Will Davidow <w.davidow@gmail.com>",
+  "contributors": [
+    {
+      "name": "Brian Kinney",
+      "email": "webdevbrian@gmail.com",
+      "url": ""
+    },
+    {
+      "name": "Will Davidow",
+      "email": "w.davidow@gmail.com",
+      "url": "davidow.io"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/webdevbrian/whereami/issues"
@@ -58,6 +69,7 @@
     "redux-logger": "^3.0.6",
     "rimraf": "^2.6.1",
     "webpack": "^3.5.6",
+    "webpack-dashboard": "^1.0.0-5",
     "webpack-dev-server": "^2.7.1"
   },
   "browserslist": [

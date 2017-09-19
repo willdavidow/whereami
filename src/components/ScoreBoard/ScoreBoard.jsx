@@ -1,21 +1,17 @@
 import React, {PureComponent} from 'react';
+import ScoreboardContainer from './ScoreBoard.style';
 
 class ScoreBoard extends PureComponent {
   render() {
     return (
-      <div
-        style={{
-          position: `absolute`,
-          bottom: `10px`,
-          left: `10px`,
-            backgroundColor: `#cccccc`,
-            width: `300px`,
-            height: `150px`,
-            zIndex: 2
-        }}
-      >
-        SCORE!
-      </div>
+      <ScoreboardContainer>
+        <header>Scoreboard</header>
+        <ul className="scoreboard__list">
+          <li className="scoreboard__item" data-label="Current Round">1/5</li>
+          <li className="scoreboard__item" data-label="Last Round Score">100</li>
+          <li className="scoreboard__item" data-label="Total Score">1000</li>
+        </ul>
+      </ScoreboardContainer>
     );
   }
 }
